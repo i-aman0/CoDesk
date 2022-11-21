@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="icon" href="images/favicon.png">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400&display=swap");
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        *::selection {
+            color: #000;
+            background-color: #dfdfdf;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            font-weight: 300;
+            color: #dfdfdf;
+            background-color: #1D2026;
+        }
+
+        .container {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 0 6rem 6rem 6rem;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8rem 0 6rem 0;
+        }
+        @media only screen and (max-width: 580px) {
+            .nav {
+                padding-bottom: 2rem;
+            }
+        }
+        .nav__list {
+            display: flex;
+            gap: 16rem;
+            list-style: none;
+        }
+        @media only screen and (max-width: 920px) {
+            .nav__list {
+                gap: 6rem;
+            }
+        }
+        @media only screen and (max-width: 580px) {
+            .nav__list {
+                gap: 4rem;
+            }
+        }
+        .nav__link {
+            text-decoration: none;
+            color: #fafafa;
+            transition: color 0.2s ease;
+        }
+        .nav__link:hover {
+            color: #949494;
+        }
+        .nav__link--active {
+            color: #616161;
+        }
+        .nav__link--active:hover {
+            color: #616161;
+        }
+        @media only screen and (max-width: 580px) {
+            .nav__copy {
+                display: none;
+            }
+        }
+
+        .page-title {
+            margin-top: 10rem;
+            margin-bottom: 8rem;
+            font-family: "Anton", sans-serif;
+            font-size: 16rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: -0.4px;
+            line-height: 16rem;
+            color: #fafafa;
+        }
+        @media only screen and (max-width: 760px) {
+            .page-title {
+                margin-bottom: 6rem;
+                font-size: 8rem;
+            }
+        }
+        @media only screen and (max-width: 580px) {
+            .page-title {
+                margin-bottom: 4rem;
+                font-size: 7rem;
+            }
+        }
+        @media only screen and (max-width: 370px) {
+            .page-title {
+                margin-bottom: 0;
+                font-size: 5rem;
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        @media only screen and (max-width: 760px) {
+            .content {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+            }
+        }
+        .content__descriptor {
+            width: 14%;
+            border-top: 1px solid #7b7b7b;
+            padding-top: 4rem;
+        }
+        @media only screen and (max-width: 760px) {
+            .content__descriptor {
+                width: 100%;
+                padding: 2rem 0;
+                border-top: none;
+            }
+        }
+        .content__title {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        .content__text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            gap: 2rem;
+            width: 50%;
+            border-top: 1px solid #7b7b7b;
+            border-bottom: 1px solid #7b7b7b;
+            margin-right: 10rem;
+            padding: 4rem 0;
+        }
+        @media only screen and (max-width: 920px) {
+            .content__text-box {
+                margin-right: 0;
+            }
+        }
+        @media only screen and (max-width: 760px) {
+            .content__text-box {
+                width: 100%;
+                padding: 2rem 0;
+            }
+        }
+        @media only screen and (max-width: 580px) {
+            .content__text-box {
+                border-bottom: none;
+            }
+        }
+        .content__text {
+            width: 320px;
+        }
+        @media only screen and (max-width: 580px) {
+            .content__text {
+                width: 100%;
+            }
+        }
+
+
+
+
+
+
+        .burger{
+            position: absolute;
+            top: 1.7rem;
+            right: 2rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 31px;
+            height: 21px;
+        }
+        
+        .burger .bar{
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 700px){
+
+            .text-container{
+                margin-left: 25%;
+            }
+
+            .text-container h1{
+                font-size: 50px;
+                
+            }
+
+            .text-container p{
+                margin-top: 20px;
+            }
+
+            .lamp-container{
+                display: none;
+            }
+
+            .burger{
+                display: flex;
+            }
+
+            .nav-elements{
+                display: none;
+                width: 100%;
+            }
+
+            #btn{
+                display: none;
+            }
+
+            nav{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul{
+                width: 100%;
+                flex-direction: column;
+            }
+
+            nav li{
+                text-align: center;
+            }
+
+            nav li a{
+                padding: 0.75rem 1.5rem;
+            }
+
+            .nav-elements.active{
+                display: flex;
+            }
+        }
+    </style>
+
+       
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1 id="title"><a href="index.html">CoDesk</a></h1>
+        <a href="#" class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <ul>
+            <li class="nav-elements"><a href="index.html#courses">Courses</a></li>
+            <li class="nav-elements"><a href="CodeEditor/codeEditor.html" target="_blank">Code Editor</a></li>
+            <li class="nav-elements"><a href="about.html">About</a></li>
+            <li class="nav-elements"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="container">
+        <header>
+            
+          <h1 class="page-title">About Us</h1>
+        </header>
+        <main>
+          <article class="content">
+            <section class="content__descriptor">
+              <h2 class="content__title">Info</h2>
+            </section>
+            <section class="content__text-box">
+              <p class="content__text">
+                We aim to be the educators we wished we had when we started out.
+                Lightning-fast, always on your side and fundamentally helpful.
+              </p>
+              <p class="content__text">
+                Our knowledge is your knowledge. Our network is your network. Your
+                problems are our problems. We don't have all the answers, but we
+                will help you find them.
+              </p>
+            </section>
+          </article>
+        </main>
+      </div>
+    
+    
+
+
+
+
+
+    <!-- ------- FOOTER ------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <!-- <li><a href="#"></a></li> -->
+                        <li><a href="#">status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online Service</h4>
+                    <ul>
+                        <li><a href="#">Job search</a></li>
+                        <li><a href="#">Post a job</a></li>
+                        <li><a href="#">Create Resume</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/starlord_aman/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amankhan9026/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
