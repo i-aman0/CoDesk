@@ -9,6 +9,6 @@ function toggleBtn(){
 const burger=document.getElementsByClassName('burger')[0]
 const navBar=document.getElementsByClassName('nav-elements')[0]
 
-burger.addEventListener('click', () => {
+burger.addEventListener('click', function() {
     navBar.classList.toggle('active')
 })
