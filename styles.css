@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+::selection{
+    background: #00986F;
+    color: white;
+}
+
 .header{
     background: #1D2026;
     min-height: 100vh;
